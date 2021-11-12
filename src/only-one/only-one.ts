@@ -27,7 +27,11 @@ const snake = new Snake()
 type AnimalInZoo = Monkey | Snake
 
 function isMonkey(animal: AnimalInZoo): animal is Monkey {
-    return (animal as Monkey).eatBanana !== undefined;
+    // V1:
+    // return (animal as Monkey).eatBanana !== undefined;
+
+    // V2:
+    return animal instanceof Monkey;
 }
 
 function eatSomething(animal: AnimalInZoo): string {
