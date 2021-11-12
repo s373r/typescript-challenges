@@ -9,10 +9,15 @@
 * Hint: https://www.typescriptlang.org/docs/handbook/advanced-types.html#union-types
 */
 
+// NOTE: This is bad advice. In real applications,
+//       `ScreenSideValue` will be of course an integer type,
+//       not an union type
+type ScreenSideValue = string | number;
+
 const iAmANumber = 800
 const iAmAString = '600'
 
-function configureScreenSize(width: string, height: string) {
+function configureScreenSize(width: ScreenSideValue, height: ScreenSideValue) {
     return `Setting screen size as ${width}px x ${height}px`;
 }
 
