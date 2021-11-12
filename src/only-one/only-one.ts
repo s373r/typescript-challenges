@@ -10,13 +10,13 @@
 */
 
 class Monkey {
-    eatBanana() {
+    eatBanana(): string {
         return 'Eating banana!'
     }
 }
 
 class Snake {
-    eatMouse() {
+    eatMouse(): string {
         return 'Eating mouse!'
     }
 }
@@ -26,9 +26,16 @@ const snake = new Snake()
 
 type AnimalInZoo = Monkey | Snake
 
-function eatSomething(animal: AnimalInZoo) {
-    animal.eatBanana();
-    animal.eatMouse();
+function isMonkey(animal: AnimalInZoo): animal is Monkey {
+    return (animal as Monkey).eatBanana !== undefined;
+}
+
+function eatSomething(animal: AnimalInZoo): string {
+    if (isMonkey(animal)) {
+        return animal.eatBanana();
+    }
+
+    return animal.eatMouse();
 }
 
 /* Do not modify tests */
