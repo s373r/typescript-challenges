@@ -20,6 +20,6 @@ If you also want to try to solve these tasks -- fork [the original repo](https:/
 
 ## Acknowledgments
 
-Przemek Smyrdek (@psmyrdek), I would like to say a big thank you for the interestingly designed challenges, which were fun to solve! 
+Przemek Smyrdek ([@psmyrdek](https://github.com/psmyrdek)), I would like to say a big thank you for the interestingly designed challenges, which were fun to solve! 
 
 Dziękuję ci bardzo!
